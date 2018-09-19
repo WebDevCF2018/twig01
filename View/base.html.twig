@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Ceci est la base{% endblock %}</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+{% block body %}
+    {% block myTitle %}
+<h1>Mon titre</h1>
+    {% endblock %}
+{% endblock %}
+
+</body>
+</html>

@@ -5,6 +5,7 @@
  * Time: 16:01
  */
 
+// create datas
 $datas = [
     1=>[
         "title"=>"Bienvenue Chez Twig",
@@ -24,4 +25,20 @@ Flexible: Twig is powered by a flexible lexer and parser. This allows the develo
 
 ];
 
-var_dump($datas);
+// For loading Twig and other libraries (composer)
+require_once './vendor/autoload.php';
+
+// directory that contains .twig's files
+$loader = new Twig_Loader_Filesystem('./View');
+
+// create environment twig
+$twig = new Twig_Environment($loader, array(
+    // link for cache
+    //'cache' => '/path/to/compilation_cache',
+
+));
+
+// first render
+echo $twig->render("base.html.twig");
+
+//var_dump($datas);
