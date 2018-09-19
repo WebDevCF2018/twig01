@@ -1,3 +1,7 @@
 # Created by Michaël Pitz
 /.idea/
 
+# hidden composer and symfony bundle
+/vendor/composer/
+/vendor/symfony/
+
